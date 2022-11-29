@@ -1,15 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'form-left-side',
   templateUrl: './left-side.component.html',
   styleUrls: ['./left-side.component.css']
 })
-export class LeftSideComponent implements OnInit {
+export class LeftSideComponent {
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+  
 
 }
