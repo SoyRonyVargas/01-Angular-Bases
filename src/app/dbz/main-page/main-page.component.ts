@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-interface Personaje {
+export interface Personaje {
   nombre: string
   poder: number
 }
@@ -18,24 +18,5 @@ export class MainPageComponent {
     nombre: "",
     poder: 0
   }
-
-  agregar()
-  {
-    
-    if( this.nuevo.nombre.trim().length === 0 ) return;
-
-    this.personajes.push(this.nuevo)
-
-    this.limpiar()
-
-  }
   
-  limpiar()
-  {
-    this.nuevo = {
-      nombre: "",
-      poder: 0
-    }    
-  }
-
 }

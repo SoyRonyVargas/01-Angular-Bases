@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Personaje } from '../main-page/main-page.component';
 
 @Component({
   selector: 'form-left-side',
@@ -7,6 +8,6 @@ import { Component, Input } from '@angular/core';
 })
 export class LeftSideComponent {
 
-  
+  @Input() personajes: Personaje[] = []   
 
 }
