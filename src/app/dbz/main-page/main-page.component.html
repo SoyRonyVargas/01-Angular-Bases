@@ -8,13 +8,18 @@
 <main>
     <section class="row">
         
-        <form-left-side class="col" [personajes]="personajes"></form-left-side>
+        <!-- <form-left-side class="col" [personajes]="personajes"></form-left-side> -->
+        <form-left-side class="col"></form-left-side>
 
         <article class="col">
+            <!-- <app-form-side
+                [nuevo]="nuevo"
+                (onNuevoPersonaje)="agregarNuevoPersonaje( $event )"
+            ></app-form-side> -->
             <app-form-side
-                [personajes]="personajes"
                 [nuevo]="nuevo"
             ></app-form-side>
         </article>
+
     </section>
 </main>

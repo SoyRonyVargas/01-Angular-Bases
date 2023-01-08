@@ -1,5 +1,6 @@
-import { Component, Input } from '@angular/core';
 import { Personaje } from '../main-page/main-page.component';
+import { DbzService } from '../services/dbz.service';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-form-side',
@@ -8,18 +9,27 @@ import { Personaje } from '../main-page/main-page.component';
 })
 export class FormSideComponent {
 
-  @Input() personajes : Personaje[] = []
   @Input() nuevo : Personaje = {
     nombre: '',
     poder: 0
   }
+
+  constructor(
+    private dbzService: DbzService
+  ){}
+
+  // @Output() onNuevoPersonaje: EventEmitter<Personaje> = new EventEmitter()
 
   agregar()
   {
     
     if( this.nuevo.nombre.trim().length === 0 ) return;
 
-    this.personajes.push(this.nuevo)
+    // console.log(this.nuevo);
+
+    this.dbzService.agregarNuevoPersonaje(this.nuevo)
+
+    // this.onNuevoPersonaje.emit(this.nuevo)
 
     this.limpiar()
 
